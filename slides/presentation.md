@@ -29,7 +29,7 @@ git bisect good  # or bad, based on what you find
 git bisect reset # return to HEAD when done
 ```
 
-Binary search through your commit history — O(log n) steps
+Binary search through your commit history.
 
 ---
 
@@ -89,7 +89,7 @@ curl -s \
   | grep -q "<title>Choose language"
 ```
 
-Returns `0` (success) when working — perfect for scripting
+Returns `0` (success) when working
 
 ---
 
@@ -118,15 +118,17 @@ git bisect start 11.x 11.2.0   # <bad> <good>
 git bisect run ~/tmp/check-installable.sh
 ```
 
-Git runs the script automatically at each step — no manual checking
+Git runs the script automatically at each step.
 
 ---
 
 ## Caveats
 
+Real debugging requires some extra work, like maybe `composer install` or fix database, etc. Those can be factored into the script. Here:
+
 * Each bisect step checks out fresh code — rebuild what's needed (e.g. `composer install`)
 * Some situations require a fresh database or `drush si` at each step
-* On macOS/Windows, Mutagen needs time to sync large git checkouts — add `ddev mutagen sync` to your script
+* On macOS/Windows, Mutagen needs a chance to sync large git checkouts — add `ddev mutagen sync` to your script
 
 ---
 
