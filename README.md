@@ -1,4 +1,4 @@
-# Git Bisect for Fun and Provit
+# Git Bisect for Fun and Profit
 
 ## 🎯 View the Presentation
 
