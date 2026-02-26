@@ -114,7 +114,7 @@ exit $?
 
 ```bash
 git bisect reset
-git bisect start 11.x 11.2.0   # <bad> <good>
+git bisect start 11.3.x 11.2.0   # <bad> <good>
 git bisect run ~/tmp/check-installable.sh
 ```
 
